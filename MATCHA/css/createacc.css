@@ -1,0 +1,98 @@
+body {
+  background-image: url('https://i.pinimg.com/736x/c3/6b/fb/c36bfb8a7ce8d33d84bb314ee667e3b4.jpg');
+}
+
+.all {
+  width: 80%;
+  margin: auto;
+  margin-top: 55px;
+  margin-bottom: 80px;
+}
+
+.questions {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.questions h1 {
+  text-align: center;
+}
+
+.questions label,
+.questions select,
+.questions input[type="text"],
+.questions input[type="password"],
+.questions textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.questions select {
+  height: 45px;
+}
+
+.questions button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.questions button:hover {
+  background-color: #333333;
+}
+
+.questions .gender label {
+  margin-top: 10px;
+}
+
+.form-container {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.form-container label,
+.form-container select,
+.form-container input[type="text"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-container select {
+  height: 45px;
+}
+
+.form-container button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(181, 171, 171);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+

@@ -1,0 +1,148 @@
+<html>
+<head>
+	<title>Principal Page</title>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/principalstyle.css" type="text/css" rel="stylesheet">
+
+    <script src="js\javascript.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+ 
+
+  <div id="myCarousel" class="carousel" data-bs-ride="carousel">
+    <div class="carousel-inner"> <!-- Wrapper for slides -->
+      <div class="carousel-item active">
+        <img class="d-block img-fluid mx-auto" src= "https://img.myloview.com/stickers/chico-joven-con-barba-en-restaurante-de-hamburguesas-400-229147499.jpg" alt="elephant">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid mx-auto" src="https://img.myloview.com/stickers/chico-joven-atractivo-bebiendo-de-vaso-rojo-en-una-barbacoa-por-el-dia-de-la-independencia-de-estados-unidos-el-4-de-julio-400-255627794.jpg" alt="tiger">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid mx-auto" src="https://img.myloview.com/stickers/joven-con-taza-de-cafe-trabajando-en-el-ordenador-junto-a-la-ventana-400-222626754.jpg" alt="giraffe">
+      </div>
+    </div>
+    <ul class="carousel-indicators"> <!-- Indicators -->
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ul>
+  </div>
+
+  <h2> Juan,  21 </h2>
+  
+
+  
+  <div class="note">
+    <textarea class="note-text" placeholder="I am feeling like going out tn"></textarea>
+  </div>
+
+
+  <div class="descripcion">
+    <h3>Description:</h3>
+    <textarea placeholder="I am a 21 years old, that enjoy going hiking and also swiming, i love nature and meet new people"></textarea>
+  </div>
+
+<div class="center">
+  <img src=" https://media.istockphoto.com/id/1200677760/es/foto/retrato-de-apuesto-joven-sonriente-con-los-brazos-cruzados.jpg?s=612x612&w=0&k=20&c=RhKR8pxX3y_YVe5CjrRnTcNFEGDryD2FVOcUT_w3m4w=" alt="Texto alternativo de la imagen" class="img-size" >
+  </div>
+
+  <div class="about">
+    <h3>About:</h3>
+    <textarea placeholder="Occupation">Teacher</textarea>
+    <textarea placeholder="Where do you live">Aarhus, Denmark</textarea>
+  </div>
+
+<div class="photo3">
+    <img src=" https://media.revistagq.com/photos/5ed5285ef95b900ced636e6d/2:3/w_2675,h_4013,c_limit/GettyImages-619394704.jpg" class="photo3size">
+    </div>
+
+    <div class="way">
+      <h3>The way to get my heart is..:</h3>
+      <textarea placeholder="If you like nature"></textarea>
+     
+    </div>
+
+
+    <div class="botones">
+      <button class="one" onclick="handleHeartClick()">
+        <img src="https://images.vexels.com/media/users/3/217128/isolated/lists/6b516b513468633bbbdb74f551dc6d26-diseno-de-dibujo-lineal-de-corazones-superpuestos.png" alt="Descripción de la imagen">
+      </button>
+      <button class="one" onclick="handleCloseClick()">
+        <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/x-512.png" alt="Descripción de la imagen">
+      </button>
+    </div>
+    
+
+  
+<nav>
+    <ul>
+        <li><a href="event.html">Events</a></li>
+        <hr>
+        <li><a href="messages.html">Messages</a></li>
+        <hr>
+        <li><a href="manageprofile.html"> Profile</a></li>
+        <hr>
+        <li><a href="principalpage.html"> Principal</a></li>
+        <hr>
+    </ul>
+</nav>
+ 
+
+  <div class="boton-centrado">
+    <a href="#top">Go up</a>
+  </div>
+
+  
+   
+ <script>
+
+function handleHeartClick() {
+  // Handle heart button click
+  console.log("Heart button clicked");
+}
+
+function handleCloseClick() {
+  // Handle close button click
+  console.log("Close button clicked");
+}
+
+
+		// Obtener el navbar
+var navbar = document.querySelector('.navbar');
+
+// Obtener la posición actual del scroll
+var prevScrollpos = window.pageYOffset;
+
+// Escuchar el evento scroll
+window.onscroll = function() {
+
+  // Obtener la posición actual del scroll
+  var currentScrollPos = window.pageYOffset;
+
+  // Si la posición actual del scroll es mayor que la posición anterior
+  if (prevScrollpos > currentScrollPos) {
+    // Mostrar el navbar
+    navbar.style.display = "block";
+  } else {
+    // Ocultar el navbar
+    navbar.style.display = "none";
+  }
+
+  // Guardar la posición actual del scroll para la próxima vez
+  prevScrollpos = currentScrollPos;
+  
+}
+
+	</script>
+
+
+   
+
+
+</body>

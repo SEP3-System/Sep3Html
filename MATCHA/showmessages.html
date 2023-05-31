@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <title>Messages</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/showmessages.css" type="text/css" rel="stylesheet">
+ 
+    <script src="js/javascript.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="chat-profile">
+                <img class="profile-image" src="https://companynewheroes.com/wp-content/blogs.dir/18/files/2019/09/Lucas-De-Man-Fotograaf-Anne-Harbers-2-1024x683.jpg" alt="Profile picture">
+                <p class="chat-profile-text">John Doe</p>
+            </div>
+        </div>
+        <div class="chat-messages">
+            <div class="chat-message">
+                <p>Hello! How are you doing today?</p>
+            </div>
+        </div>
+        <div class="chat-input-bar">
+            <input class="chat-input" type="text" placeholder="Type your message here">
+            <button class="send-button">Send</button>
+
+            <span class="arrow-back" onclick="goBack()">&#8592;</span>
+
+        </div>
+
+      
+    <script>
+
+function goBack() {
+  window.location.href = "messages.html";
+}
+
+        // Add your custom JavaScript code for handling chat functionality here
+        const sendButton = document.querySelector('.send-button');
+        const chatMessages = document.querySelector('.chat-messages');
+        const chatInput = document.querySelector('.chat-input');
+
+        sendButton.addEventListener('click', () => {
+            const messageText = chatInput.value.trim();
+
+            if (messageText !== '') {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('chat-message');
+                messageElement.innerHTML = `
+                    <p>${messageText}</p>
+                `;
+                chatMessages.appendChild(messageElement);
+                chatInput.value = '';
+            }
+        });
+    </script>
+
+    
+
+    <script src="js/chat.js"></script>
+</body>
+</html>

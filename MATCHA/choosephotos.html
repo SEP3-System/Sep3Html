@@ -1,0 +1,92 @@
+<html>
+<head>
+	<title>Choose photos</title>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css\choosephotos.css" type="text/css" rel="stylesheet">
+
+    <script src="js\javascript.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+<body>
+
+  <h1> Choose your photos</h1>
+    <div class="rounded-box">
+        <div class="photo-box">
+          <input type="file" accept="image/*" capture="camera" id="photo-input1">
+          <label for="photo-input1">
+            <div class="photo-placeholder">
+              <span>Click to Add Photo</span>
+              
+            </div>
+          </label>
+        </div>
+        <div class="photo-box">
+          <input type="file" accept="image/*" id="photo-input2">
+          <label for="photo-input2">
+            <div class="photo-placeholder">
+              <span>Click to Add Photo</span>
+            </div>
+          </label>
+        </div>
+        <div class="photo-box">
+          <input type="file" accept="image/*" id="photo-input3">
+          <label for="photo-input3">
+            <div class="photo-placeholder">
+              <span>Click to Add Photo</span>
+            </div>
+          </label>
+        </div>
+        <div class="photo-box">
+          <input type="file" accept="image/*" id="photo-input4">
+          <label for="photo-input4">
+            <div class="photo-placeholder">
+              <span>Click to Add Photo</span>
+            </div>
+          </label>
+        </div>
+        <div class="photo-box">
+          <input type="file" accept="image/*" id="photo-input5">
+          <label for="photo-input5">
+            <div class="photo-placeholder">
+              <span>Click to Add Photo</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+<button class="next-button" onclick="location.href='manageprofile.html'">Next</button>
+      
+      <div class="rounded-box">
+        <!-- Rounded Boxes with Photo Selection -->
+        <!-- Your photo selection code here -->
+    
+        
+        <script src="js/javascript.js"></script>
+        <script>
+            function handlePhotoInputChange(photoIndex) {
+                const inputElement = document.getElementById(`photo-input${photoIndex}`);
+                const placeholderElement = document.querySelector(`[for="photo-input${photoIndex}"] .photo-placeholder`);
+                const file = inputElement.files[0];
+                const reader = new FileReader();
+    
+                reader.onload = function (e) {
+                    placeholderElement.style.backgroundImage = `url('${e.target.result}')`;
+                    placeholderElement.classList.add('photo-selected');
+                };
+    
+                if (file) {
+                    reader.readAsDataURL(file);
+                } else {
+                    // If no file is selected, reset the placeholder
+                    placeholderElement.style.backgroundImage = '';
+                    placeholderElement.classList.remove('photo-selected');
+                }
+            }
+        </script>
+</body>
+

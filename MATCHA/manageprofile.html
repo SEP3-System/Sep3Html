@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/manageprofile.css">
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<script src="js/javascript.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+	<style>
+		body{
+			background-color: rgb(205, 193, 179);
+		}
+	</style>
+
+</head>
+<body>
+	
+
+	<div class="container">
+		<div class="profile">
+			<img src="https://companynewheroes.com/wp-content/blogs.dir/18/files/2019/09/Lucas-De-Man-Fotograaf-Anne-Harbers-2-1024x683.jpg" alt="Profile picture">
+			<p id="name">John Doe  </p>
+			<p1> (Age)</p1>
+		 </div>
+			
+
+
+	<div class="form">
+		<form>
+			<label for="language">Language:</label><br>
+			<select id="language" name="language">
+				<option value="german">German</option>
+				<option value="english">English</option>
+				<option value="spanish">Spanish</option>
+				<option value="danish">Danish</option>
+			</select><br><br>
+
+
+			
+					<h2>Select your interests:</h2>
+					
+				<div class="interests-box">
+					<div class="options-box">
+					  <div class="option">Travel</div>
+					  <div class="option">Clothes</div>
+					  <div class="option">Netflix</div>
+					  <div class="option">Food</div>
+					  <div class="option">Fitness</div>
+					  <div class="option">Books</div>
+					  <div class="option">Music</div>
+					  <div class="option">Sports</div>
+					  <div class="option">Eating out</div>
+					</div>
+					<h3 id="text">Interests selected</h3>
+					<div class="selected-box">
+					  <div class="selected-items"></div>
+					</div>
+				  </div>
+
+
+
+				<div class="about-me">
+			<h3>About Me</h3>
+			<div class="horoscope">
+				<label for="horoscope">Horoscope:</label>
+				<select id="horoscope" name="horoscope">
+					<option value="Aries">Aries</option>
+					<option value="Taurus">Taurus</option>
+					<option value="Gemini">Gemini</option>
+					<option value="Cancer">Cancer</option>
+					<option value="Leo">Leo</option>
+					<option value="Virgo">Virgo</option>
+					<option value="Libra">Libra</option>
+					<option value="Scorpio">Scorpio</option>
+					<option value="Sagittarius">Sagittarius</option>
+					<option value="Capricorn">Capricorn</option>
+					<option value="Aquarius">Aquarius</option>
+					<option value="Pisces">Pisces</option>
+				</select>
+			</div>
+		
+
+		<div class="education-options">
+			<label for="education">Education</label>
+				<select id="education" name="education">
+			<option value="Aries">High School</option>
+			<option value="Aries">College</option>
+			<option value="Aries">Bachelor degree</option>
+			<option value="Aries">PhD</option>
+			</select>
+		</div>
+
+		<div class="drink-options">
+			<label for="drink">Do you drink?</label>
+				<select id="drink" name="drink">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+			<option value="Sometimes">Sometimes</option>
+		</select>
+
+		</div>
+
+		<label for="city">City:</label><br>
+		<input type="text" id="city" name="city"><br><br>
+
+		<label for="pets">Pets:</label><br>
+		<label><input type="checkbox" name="pets" value="yes">Yes</label><br>
+		<label><input type="checkbox" name="pets" value="no">No</label><br><br>
+
+	</form>
+
+			
+	<div class="form-container">
+		<form>
+		  <div class="description">
+			<label for="description">Description:</label><br>
+			<textarea id="description" name="description"></textarea>
+			<button >Update</button>
+		  </div>
+	  
+		  <div class="description">
+			<label for="note">Note:</label><br>
+			<textarea id="note" name="note"></textarea>
+
+			<button>Update</button>
+		  </div>
+		</form>
+	  </div>
+	  
+
+	
+	</div>
+    
+	<div class="button-container">
+		<button onclick="location.href='deleteacc.html'">Delete Account</button>
+		<button onclick="location.href='newpassword.html'">New Password</button>
+	</div>
+
+	
+	<nav>
+        <ul>
+            <li><a href="event.html">Events</a></li>
+            <hr>
+            <li><a href="messages.html">Messages</a></li>
+            <hr>
+            <li><a href="manageprofile.html">Profile</a></li>
+            <hr>
+			<li><a href="principalpage.html">Principal</a></li>
+            <hr>
+        </ul>
+    </nav>
+
+
+	<script>
+		// get the elements
+		const optionsBox = document.querySelector('.options-box');
+		const selectedBox = document.querySelector('.selected-items');
+		const options = optionsBox.querySelectorAll('.option');
+
+		// create a map to store the selected items
+		const selectedItemsMap = new Map();
+
+		// add event listeners to options
+		options.forEach(option => {
+			option.addEventListener('click', () => {
+				const text = option.textContent;
+
+				// check if the option is already selected
+				if (selectedItemsMap.has(text)) {
+					return;
+				}
+
+				// create a new selected item
+				const selectedItem = document.createElement('div');
+				selectedItem.classList.add('selected-item');
+				selectedItem.textContent = text;
+
+				// add the selected item to the selected items box
+				selectedBox.appendChild(selectedItem);
+
+				// add the selected item to the map
+				selectedItemsMap.set(text, selectedItem);
+
+				// add event listener to remove the selected item when clicked
+				selectedItem.addEventListener('click', () => {
+					selectedItemsMap.delete(text);
+					selectedBox.removeChild(selectedItem);
+				});
+			});
+		});
+
+		let interests = [];
+
+		const dropdownItems = document.querySelectorAll('.dropdown-item');
+		const selectedItems = document.querySelector('.selected-items');
+
+		dropdownItems.forEach(item => {
+			item.addEventListener('click', () => {
+				if (!interests.includes(item.textContent)) {
+					interests.push(item.textContent);
+					selectedItems.textContent += ' ' + item.textContent;
+				}
+			});
+		});
+	</script>
+
+
+</body>
+</html>

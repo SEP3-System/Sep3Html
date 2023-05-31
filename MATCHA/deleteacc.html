@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Delete Account</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css\deleteacc.css">
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<script src="js\javascript.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+	<h1>Are you sure you want to delete your account?</h1>
+	<form>
+		<label for="username">Email</label><br>
+		<input type="text" id="email" name="email"><br>
+
+
+		<label for="password">Password:</label><br>
+		<input type="password" id="password" name="password"><br>
+
+
+		<label for="password">Why?</label><br>
+		<textarea id="reason" name="reason"></textarea><br><br>
+
+	</form>
+	
+	<button class="big-button" onclick="location.href='accountdeleted.html'">Submit</button>
+    <button class="button" onclick="location.href='manageprofile.html'">Go back to profile</button>
+</body>
+</html>

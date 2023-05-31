@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(https://media.istockphoto.com/id/639568584/photo/happy-female-friends-disco-dancing-and-clubbing-together.jpg?s=612x612&w=0&k=20&c=pjLMUdVhW9IjAJOSehUiN7ExaFmAVk4ECp4-_k_rhLY=);
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  color: white;
+  font-size: 85px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15rem;
+}
+
+.button {
+  border-radius: 25px;
+  background-color: white;
+  color: black;
+  font-size: 34px;
+  padding: 1.9rem 10rem;
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+form {
+  font-size: 60px;
+}
+
+label {
+  padding: 0px;
+}
+
+input {
+  padding: 10px;
+  font-size: 60px;
+}
+
+.password-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.password-button button {
+  background-color: white;
+  border: none;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.password-button button:hover {
+  text-decoration: underline;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.profile img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form label {
+	margin-bottom: 10px;
+}
+
+.form select {
+	margin-bottom: 20px;
+}
+
+.form button {
+	margin-bottom: 20px;
+}
+
+.description label {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.description textarea {
+	width: 100%;
+	height: 100px;
+	resize: none;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+
+.big-button {
+  font-size: 24px;
+  padding: 20px;
+ 
+  
+}
+
+button {
+  font-size: 40px;
+  padding: 20px;
+}
+
+

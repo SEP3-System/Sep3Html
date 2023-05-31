@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css\event.css" type="text/css" rel="stylesheet">
+
+    <script src="js\javascript.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+</head>
+<body>
+
+
+
+  <div id="myCarousel" class="carousel" data-bs-ride="carousel">
+    <div class="carousel-inner"> <!-- Wrapper for slides -->
+      <div class="carousel-item active">
+        <img class="d-block img-fluid mx-auto" src= "https://angelsmusic.b-cdn.net/wp-content/uploads/2022/06/i-T9FL3F9-X3-300x400.jpg" alt="elephant">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid mx-auto" src="https://cdn.quotesgram.com/small/12/92/1801981276-threes-a-party.jpg" alt="tiger">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid mx-auto" src="https://live.staticflickr.com/2778/4097955969_3a7e8395f7_w.jpg" alt="giraffe">
+      </div>
+    </div>
+    <ul class="carousel-indicators"> <!-- Indicators -->
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ul>
+  </div>
+
+  <div class="round-button" onclick="redirectToEvent1()">Go to this event</div>
+
+  <script>
+    function redirectToEvent1() {
+      window.location.href = "event1.html";
+    }
+  </script>
+
+  <div class="descripcion1">
+    <h3>Party in Amaliegade</h3>
+    <textarea placeholder="I am hosting a little party to meet new people, cool music and a good environment, bring snacks."></textarea>
+  </div>
+
+<div class="photo2">
+  <img src="https://th.bing.com/th/id/R.d05aa862e0b2fe01e68e313aba1e29b3?rik=OLICENuBVPR2Ag&riu=http%3a%2f%2fpapers.co%2fwallpaper%2fpapers.co-af01-iam-in-concert-no-tomorrow-2-wallpaper.jpg&ehk=XTY8tDN6bsvSVOPWo1MMH3PBoviibq9oDNu0D0vpXjA%3d&risl=&pid=ImgRaw&r=0" class="img-size" >
+  </div>
+
+
+
+  <div class="descripcion2" >
+    <h3>Karneval i Horsens</h3>
+    <textarea placeholder="We are gonna celebrate a little karneval, where you have to bring your silliest custome! I would share the address with the ones that are assisting"></textarea>
+  </div>
+  
+
+  
+  <div class="round-button2" onclick="redirectToEvent2()">Go to this event</div>
+
+  <script>
+    function redirectToEvent2() {
+      window.location.href = "event2.html";
+    }
+  </script>
+
+
+
+
+<div class="photo3">
+    <img src="https://i.pinimg.com/474x/ec/3b/d3/ec3bd3fd66095ba55840d537e015a31b--vintage-cafe-espresso-coffee.jpg" class="photo3size">
+    </div>
+
+   
+
+
+    <div class="descripcion3">
+      <h3>Coffe and Meet</h3>
+      <textarea placeholder="This event is about going to a local coffe with the ones that are assisting and play some games and know each other"></textarea>
+    </div>
+  
+ 
+    <div class="round-button3" onclick="redirectToEvent3()">Go to this event</div>
+
+    <script>
+      function redirectToEvent3() {
+        window.location.href = "event3.html";
+      }
+    </script>
+
+
+<div class="button-container">
+  <a href="createevent.html" class="custom-button">Create Event</a>
+
+  <nav>
+    <ul>
+      <li><a href="event.html">Events</a></li>
+      <hr>
+      <li><a href="messages.html">Messages</a></li>
+      <hr>
+      <li><a href="manageprofile.html">Profile</a></li>
+      <hr>
+      <li><a href="principalpage.html">Principal</a></li>
+      <hr>
+
+    </ul>
+  </nav>
+
+
+ 
+
+<script>
+
+ function incrementCounter(counterId) {
+  let counterElement = document.getElementById(`counter${counterId}`);
+  let count = parseInt(counterElement.textContent);
+  count++;
+  counterElement.textContent = count.toString();
+}
+
+function decrementCounter(counterId) {
+  let counterElement = document.getElementById(`counter${counterId}`);
+  let count = parseInt(counterElement.textContent);
+  if (count > 0) {
+    count--;
+    counterElement.textContent = count.toString();
+  }
+}
+
+</script>
+
+
+<script>
+  // Obtener el navbar
+var navbar = document.querySelector('.navbar');
+
+// Obtener la posición actual del scroll
+var prevScrollpos = window.pageYOffset;
+
+// Escuchar el evento scroll
+window.onscroll = function() {
+
+// Obtener la posición actual del scroll
+var currentScrollPos = window.pageYOffset;
+
+// Si la posición actual del scroll es mayor que la posición anterior
+if (prevScrollpos > currentScrollPos) {
+  // Mostrar el navbar
+  navbar.style.display = "block";
+} else {
+  // Ocultar el navbar
+  navbar.style.display = "none";
+}
+
+// Guardar la posición actual del scroll para la próxima vez
+prevScrollpos = currentScrollPos;
+
+}
+
+
+
+</script>
+
+
+   
+    
+    </body>
+
+
+</html>
